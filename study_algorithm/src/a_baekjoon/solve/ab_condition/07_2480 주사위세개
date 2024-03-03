@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		String s = in.nextLine();
+		String[] arr = s.split(" ");
+		
+		int a = Integer.parseInt(arr[0]);
+		int b = Integer.parseInt(arr[1]);
+		int c = Integer.parseInt(arr[2]);
+
+		int ans = 0, big = 0;
+		boolean x = false,y = false,z = false;
+		
+		x = a==b?(a==c?true:false):false;
+		ans = 10000 + (a * 1000);
+		
+		if(!x) {
+			z = a!=b?(a!=c?(b!=c?true:false):false):false;
+			if(z){
+				for(int i=0; i<arr.length; i++) {
+					if(Integer.parseInt(arr[i]) > big) {
+						big = Integer.parseInt(arr[i]); 
+					}
+				}
+				ans = big*100;
+			} else {
+				int t = a==b?a:(a==c?a:c);
+				ans = 1000 + (t*100);
+			}
+		}
+		
+		System.out.println(ans);
+	}
+
+}
