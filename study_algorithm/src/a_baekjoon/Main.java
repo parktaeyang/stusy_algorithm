@@ -15,6 +15,10 @@ public class Main {
 
 		int n = in.nextInt();
 		System.out.println(n);
+		
+		for(int i=0; i<n; i++) {
+			
+		}
 	}
 
 }
